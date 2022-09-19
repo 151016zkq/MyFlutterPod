@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'MyFlutterPod_Example' do
+  pod 'MyFlutterPod', :path => '../'
+
+  target 'MyFlutterPod_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
