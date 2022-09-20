@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MyFlutterPod'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of MyFlutterPod.'
 
 # This description is used to generate tags and improve search results.
@@ -29,6 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'MyFlutterPod/Classes/**/*'
   #添加依赖库
@@ -36,8 +37,8 @@ TODO: Add long description of the pod here.
   p = Dir::open("ios_frameworks")
   arr = Array.new
   arr.push('ios_frameworks/*.framework')
-  s.ios.vendored_frameworks = arr
-  
+  s.vendored_frameworks = arr
+
   # s.resource_bundles = {
   #   'MyFlutterPod' => ['MyFlutterPod/Assets/*.png']
   # }
