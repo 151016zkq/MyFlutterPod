@@ -28,9 +28,15 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/151016zkq/MyFlutterPod.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'MyFlutterPod/Classes/**/*'
+  #添加依赖库
+  s.static_framework = true
+  p = Dir::open("ios_frameworks")
+  arr = Array.new
+  arr.push('ios_frameworks/*.framework')
+  s.ios.vendored_frameworks = arr
   
   # s.resource_bundles = {
   #   'MyFlutterPod' => ['MyFlutterPod/Assets/*.png']
